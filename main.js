@@ -4,6 +4,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
  * Preloader
  /* ---------------------------------------------- */
 (function(){
+
     $(window).one('load', function() {
         $(function(){
 	 var $allMsg = $('.loader');
@@ -14,8 +15,8 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
         newEL.appendTo($allMsg);
         newEL.delay(idx * 70);
         newEL.animate({ opacity: 1 }, 1100);
-	
-	
+
+
 	});
 	});
         $('.page-loader').delay(2000).fadeOut('slow');
@@ -858,6 +859,5 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
         }
 
     });
+
 })(jQuery);
-
-
