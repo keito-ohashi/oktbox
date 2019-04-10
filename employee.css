@@ -1,6 +1,4 @@
-.navbar{
-  background-color: #000000;
-}
+
 body {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 1.4rem;
@@ -31,8 +29,30 @@ p {
     margin-inline-end: 0px;
 }
 
+.schedule-title span{
+     position: relative;
+     display: inline-block;
+     padding: 0 0.5em;
+}
 
-.contents-employee{
+.schedule-title span::before, .schedule-title span::after{
+     position: absolute;
+     top: 50%;
+     content: '';
+     width: 1.5em;
+     height: 1px;
+     background-color: black;
+}
+
+.schedule-title span::before {left: 100%;}
+.schedule-title span::after { right: 100%;}
+.schedule-background{
+  background-image: url("about_bg.jpg");
+  background-size: cover;
+  height: auto;
+
+}
+.contents-employee,.content-employee{
   padding: 100px 0 0;
 }
 
@@ -77,15 +97,36 @@ p {
 .content-employee{
   display: flex;
   margin-bottom: 140px;
-
 }
 
-.employee-txt{
-  text-align: center;
+.my-example{
+  color:#31b0d5;
 }
+
+.zayunomei-box{
+  border: 1px solid;
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    margin: 0 auto 140px;
+}
+
+.student-box{
+  border: 1px solid #31b0d5;
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    margin: 0 auto 140px;
+}
+
+
 /*レスポンシブ対応*/
 
 @media (min-width:768px) {
+
+  .navbar-transparent{
+    background-color: rgba(10, 10, 10, 0.9);
+  }
 
   .content-employee img{
     width: 100%;
@@ -100,6 +141,9 @@ p {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+  .schedule-box{
+    border-bottom: 1px solid #DDDDDD;
+  }
 
 }
 
@@ -107,13 +151,19 @@ p {
 
 /*スマホ用*/
 @media (max-width:767px) {
-
+  p{
+    font-size: 14px;
+  }
   .employee-prof{
     flex-direction: column;
   }
 
   .content-employee{
     flex-direction: column;
+  }
+
+  .employee-txt{
+    padding: 55px 60px 0;
   }
 
   .img-box,.text-box{
@@ -130,16 +180,15 @@ p {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-}
-
-/* タブレット・小型PC用 */
-@media (max-width:1023px) {
-
-
-}
-
-/* PC用 */
-@media (min-width:1024px) {
-
+  .schedule-box{
+    background-color: rgba(49, 176, 176, 0.8);
+    opacity: 0.7;
+    color: white;
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 60px 80px;
+    margin: 0 auto 70px;
+    border-radius: 10px;
+  }
 
 }
